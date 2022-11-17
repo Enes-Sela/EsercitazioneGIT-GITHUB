@@ -66,5 +66,56 @@ namespace bibliotecaScolastica
                 return tempo;
             }
         }
+        
+        class Biblioteca 
+        {
+            List<Libro> elencoLibri = new List<Libro>();
+
+            internal string NomeCliente { get; set; }
+            internal string Indirizzo { get; set; }
+            internal int OrariApertura { get; set; }
+            internal int OrariChiusura { get; set; }
+
+            internal Biblioteca(List<Libro> elencoLibri, string nomeCliente, string indirizzo, int orariApertura, int orariChiusura)
+            {
+                this.elencoLibri = elencoLibri;
+                this.NomeCliente = nomeCliente;
+                this.Indirizzo = indirizzo;
+                this.OrariApertura = orariApertura;
+                this.OrariChiusura = orariChiusura;
+            }
+
+            public void OperazioniLibro(Libro Autore, Libro titolo, Libro editore, Libro annoPubblicazione, Libro numeroPagine,List<Libro> libri) 
+            {
+                elencoLibri.Add(Autore);
+                elencoLibri.Add(titolo);
+                elencoLibri.Add(editore);
+                elencoLibri.Add(annoPubblicazione);
+                elencoLibri.Add(numeroPagine);
+
+
+                for (int i = 0; i < elencoLibri.Count; i++)
+                {
+                    if (elencoLibri.Contains(titolo))
+                    {
+                        titolo = (Libro)elencoLibri[i]; 
+                    }
+                }
+
+                for (int j = 0; j < elencoLibri.Count; j++)
+                {
+                    if (elencoLibri.Contains(Autore))
+                    {
+                        Autore = (Libro)elencoLibri[j];
+                    }
+                }
+
+                for (int i = 0; i < elencoLibri.Count; i++)
+                {
+                    int numeroLibri = 0;
+                    numeroLibri = elencoLibri.Count;
+                }
+            }
+        }
     }
 }
