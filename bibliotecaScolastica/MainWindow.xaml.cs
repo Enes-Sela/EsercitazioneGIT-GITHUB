@@ -15,6 +15,8 @@ using System.Windows.Shapes;
 
 namespace bibliotecaScolastica
 {
+    //Commento fatto
+    
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
